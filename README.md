@@ -39,11 +39,11 @@ For changing permissions.
 
 Alternatively run:
 
-<code>g++ -o build/GassinRT main.cpp -luv -lv8 -std=c++20</code>
+<code>g++ -o build/GassinRT main.cpp -luv -lv8 -std=c++20 -I ./src</code>
 
 or
 
-<code>clang++ -o build/GassinRT main.cpp -luv -lv8 -std=c++20</code>
+<code>clang++ -o build/GassinRT main.cpp -luv -lv8 -std=c++20 -I ./src</code>
 
 <h1>Step 3</h1>
 

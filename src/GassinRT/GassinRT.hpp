@@ -17,8 +17,8 @@ namespace GassinRT
 		v8::Local<v8::ObjectTemplate> consoleObject = v8::ObjectTemplate::New(isolate);
 		v8::Local<v8::ObjectTemplate> fileObject = v8::ObjectTemplate::New(isolate);
 		consoleObject->Set(isolate, "log", v8::FunctionTemplate::New(isolate, SystemConsole::SystemConsoleOut));
-                consoleObject->Set(isolate, "getinput", v8::FunctionTemplate::New(isolate, SystemConsole::SystemConsoleIn));
-                global->Set(isolate, "terminal", consoleObject);
+        consoleObject->Set(isolate, "getinput", v8::FunctionTemplate::New(isolate, SystemConsole::SystemConsoleIn));
+        global->Set(isolate, "terminal", consoleObject);
 
 		fileObject->Set(isolate, "read", v8::FunctionTemplate::New(isolate, FileHandle::ReadFile));
 		fileObject->Set(isolate, "write", v8::FunctionTemplate::New(isolate, FileHandle::WriteFile));

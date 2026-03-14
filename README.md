@@ -2,11 +2,20 @@
 
 A lightweight JS runtime for linux (For Now) that can do system level tasks through JavaScript
 
+
+
 # Just Running it
 
 <h1>Step 1:</h1>
 
 Go to releases on github and click and download it (sha256sums provided)
+
+<h1>Step 2:</h1>
+
+Run with your .js file as the first argument.
+
+<code>./GassinRT hi.js</code>
+
 
 # Build Instructions 
 

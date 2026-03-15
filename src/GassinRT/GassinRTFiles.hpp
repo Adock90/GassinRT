@@ -79,26 +79,26 @@ namespace FileHandle
 	{
 		FILE* FilePtr;
 
-                v8::Isolate* isolate = args.GetIsolate();
-                if (args.Length() != 2)
-                {
-                        isolate->ThrowError("Bad Params");
-                        exit(1);
-                }
+        v8::Isolate* isolate = args.GetIsolate();
+        if (args.Length() != 2)
+        {
+            isolate->ThrowError("Bad Params");
+            exit(1);
+        }
 
-                v8::String::Utf8Value Filename(isolate, args[0]);
-                if (*Filename == nullptr)
-                {
-                        isolate->ThrowError("Error Loading File");
-                        exit(1);
-                }
+        v8::String::Utf8Value Filename(isolate, args[0]);
+        if (*Filename == nullptr)
+        {
+            isolate->ThrowError("Error Loading File");
+            exit(1);
+        }
 
-                FilePtr = fopen(*Filename, "w");
-                if (FilePtr == NULL)
-                {
-                        isolate->ThrowError("Error Loading File");
-                        exit(1);
-                }
+        FilePtr = fopen(*Filename, "w");
+        if (FilePtr == NULL)
+        {
+            isolate->ThrowError("Error Loading File");
+            exit(1);
+        }
 		
 		v8::String::Utf8Value str(isolate, args[1]);	
 		const char* ContentCFormat = ToCString(str);

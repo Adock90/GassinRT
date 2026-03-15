@@ -70,7 +70,7 @@ namespace GassinRT
 		SetCallbackTemplate(GlobalObject, isolate);	
 		
 		v8::Local<v8::Context> LocalContext = v8::Context::New(isolate, NULL, GlobalObject);	
-                v8::Context::Scope CScope(LocalContext);
+        v8::Context::Scope CScope(LocalContext);
 
 		char* JS = FileHandle::ReadJSFile(File);
 		
@@ -83,7 +83,7 @@ namespace GassinRT
 		}
 
 		v8::Local<v8::Value> Res;
-	       	if (!Comp->Run(LocalContext).ToLocal(&Res))
+		if (!Comp->Run(LocalContext).ToLocal(&Res))
 		{
 			assert(try_catch.HasCaught());
 			GassinException::GassinRTReportException(isolate, &try_catch);
